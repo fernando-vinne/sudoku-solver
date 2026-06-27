@@ -1,0 +1,102 @@
+sudoku example:
+
+angabe: sudoku = [0 1 0 9 0 0 8 0 0 ; 0 0 0 0 0 8 0 0 4 ; 6 0 5 0 0 0 7 0 0 ; 0 9 0 0 6 0 0 0 8 ; 0 0 0 2 0 7 0 0 0 ; 8 0 0 0 3 0 0 6 0 ; 0 0 2 0 0 0 5 0 3 ; 1 0 0 4 0 0 0 0 0 ; 0 0 6 0 0 2 0 1 0]
+
+https://www.sudoku-raetsel.net/sudoku-raetsel-mit-loesung-nr-250-mittel#loesung250
+
+sudoku_test_line = [0 1 0 9 0 0 8 0 0 ; 0 0 0 0 0 8 0 0 4 ; 6 0 5 0 0 0 7 0 0 ; 0 9 0 0 6 0 0 0 8 ; 0 0 0 2 0 7 0 0 0 ; 8 0 0 0 3 0 0 6 0 ; 0 0 2 0 0 0 5 0 3 ; 1 0 0 4 0 0 0 0 0 ; 0 0 6 0 0 2 0 1 0]
+sudoku_test_column = [0 1 0 9 0 0 8 0 1 ; 0 0 0 0 0 8 0 0 1 ; 6 0 5 0 0 0 7 0 0 ; 0 9 0 0 6 0 0 0 8 ; 0 0 0 2 0 7 0 0 0 ; 8 0 0 0 3 0 0 6 0 ; 0 0 2 0 0 0 5 0 3 ; 1 0 0 4 0 0 0 0 0 ; 0 0 6 0 0 2 0 1 0]
+sudoku_test_square = [0 1 0 9 0 0 8 0 0 ; 0 0 1 0 0 8 0 0 4 ; 6 0 5 0 0 0 7 0 0 ; 0 9 0 0 6 0 0 0 8 ; 0 0 0 2 0 7 0 0 0 ; 8 0 0 0 3 0 0 6 0 ; 0 0 2 0 0 0 5 0 3 ; 1 0 0 4 0 0 0 0 0 ; 0 0 6 0 0 2 0 1 0]
+
+
+[1 1 1 2 2 2 3 3 3 ; 1 1 1 2 2 2 3 3 3 ; 1 1 1 2 2 2 3 3 3 ; 4 4 4 5 5 5 6 6 6 ; 4 4 4 5 5 5 6 6 6 ; 4 4 4 5 5 5 6 6 6 ; 7 7 7 8 8 8 9 9 9 ; 7 7 7 8 8 8 9 9 9 ; 7 7 7 8 8 8 9 9 9]
+
+11 11 11 14 14 14 17 17 17 
+11 11 11 14 14 14 17 17 17 
+11 11 11 14 14 14 17 17 17 
+
+
+
+1:3
+
+
+line: 
+
+
+1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+4 4 4 4 4 4 4 4 4
+4 4 4 4 4 4 4 4 4
+4 4 4 4 4 4 4 4 4
+7 7 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7  
+
+1 1 1 1 1 1 1 1 1 ; 1 1 1 1 1 1 1 1 1 ; 1 1 1 1 1 1 1 1 1 ; 4 4 4 4 4 4 4 4 4 ; 4 4 4 4 4 4 4 4 4 ; 4 4 4 4 4 4 4 4 4 ; 7 7 7 7 7 7 7 7 7 ; 7 7 7 7 7 7 7 7 7 ; 7 7 7 7 7 7 7 7 7  
+
+column: 
+
+1 1 1 4 4 4 7 7 7 
+1 1 1 4 4 4 7 7 7
+1 1 1 4 4 4 7 7 7
+1 1 1 4 4 4 7 7 7
+1 1 1 4 4 4 7 7 7
+1 1 1 4 4 4 7 7 7
+1 1 1 4 4 4 7 7 7
+1 1 1 4 4 4 7 7 7
+1 1 1 4 4 4 7 7 7
+
+1 1 1 4 4 4 7 7 7 ; 1 1 1 4 4 4 7 7 7; 1 1 1 4 4 4 7 7 7 ; 1 1 1 4 4 4 7 7 7 ; 1 1 1 4 4 4 7 7 7 ; 1 1 1 4 4 4 7 7 7 ; 1 1 1 4 4 4 7 7 7 ; 1 1 1 4 4 4 7 7 7 ; 1 1 1 4 4 4 7 7 7
+
+
+sudoku_wrong = [ 9 0 3 0 0 0 0 5 0 ; 8 8 0 0 6 0 3 0 9 ; 9 0 0 9 0 0 0 4 0 ; 0 0 0 0 0 0 0 3 0 ; 6 0 0 0 0 1 0 0 0 ; 0 0 8 5 0 0 2 0 7 ; 0 0 0 0 0 0 0 0 4 ; 0 0 2 7 0 0 9 0 8 ; 0 7 0 0 5 0 0 0 0 ] 
+
+
+            % last number is 0. and it should also be solved. Maybe sometime think about how to implement this direcly on the other cases. I coulnd't think of a better solution for it now
+            % m = 9;
+            % n = 9;
+            % valid = 0;
+            % while (valid == 0)
+            %     valid = valid_test(m,n,solution);
+            %     solution(m,n) = solution(m,n)+1;
+            %     if solution(m,n) == 10
+            %         solution(m,n) = 9;
+            %         disp("Error #2: solution(m,n) = 10. No solutions were found");
+            %         break;
+            %     end
+            % end
+
+
+
+
+
+sudoku_matrix(1,1) = app.EditField.Value;
+            sudoku_matrix(1,2) = app.EditField.Value_2;
+            sudoku_matrix(1,3) = app.EditField.Value_3;
+            sudoku_matrix(1,4) = app.EditField.Value_4;
+            sudoku_matrix(1,5) = app.EditField.Value_5;
+            sudoku_matrix(1,6) = app.EditField.Value_6;
+
+
+
+
+
+sudoku_matrix(1,1) = app.EditField.Value;
+            sudoku_matrix(1,2) = app.EditField_2.Value;
+            sudoku_matrix(1,3) = app.EditField_3.Value;
+            sudoku_matrix(1,4) = app.EditField_4.Value;
+            sudoku_matrix(1,5) = app.EditField_5.Value;
+            sudoku_matrix(1,6) = app.EditField_6.Value;
+            sudoku_matrix(1,7) = app.EditField_7.Value;
+            sudoku_matrix(1,8) = app.EditField_8.Value;
+            sudoku_matrix(1,9) = app.EditField_9.Value;
+            sudoku_matrix(2,1) = app.EditField_10.Value;
+            sudoku_matrix(2,2) = app.EditField_11.Value;
+            sudoku_matrix(2,3) = app.EditField_12.Value;
+            sudoku_matrix(2,4) = app.EditField_13.Value;
+            sudoku_matrix(2,5) = app.EditField_14.Value;
+            sudoku_matrix(2,6) = app.EditField_15.Value;
+            sudoku_matrix(2,7) = app.EditField_16.Value;
+            sudoku_matrix(2,8) = app.EditField_17.Value;
+            sudoku_matrix(2,9) = app.EditField_18.Value;
